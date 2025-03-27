@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+
+</style>
+</head>
+<body class="w3-light-grey w3-content" style="max-width:1600px">
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
+  <div class="w3-container">
+    <a href="#" onclick="w3_close()" class="w3-hide-large w3-right w3-jumbo w3-padding w3-hover-grey" title="close menu">
+      <i class="fa fa-remove"></i>
+    </a>
+    <img src="img\11\A\Elektrotechnika\banki.jpeg" style="width:74%;" class="w3-round"><br><br>
+    <h4><b>PORTFOLIO</b></h4>
+  </div>
+  <div class="w3-bar-block">
+    <!-- Dropdown menük a 11., 12., 13. évfolyamokhoz -->
+    <div class="dropdown">
+      <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-padding">
+        <i class="fa fa-envelope fa-fw w3-margin-right"></i> 11. évfolyam
+      </a>
+      <div class="dropdown-content">
+        <a href="#" onclick="showContent('11', 'A')">A</a>
+        <a href="#" onclick="showContent('11', 'B')">B</a>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-padding">
+        <i class="fa fa-envelope fa-fw w3-margin-right"></i> 12. évfolyam
+      </a>
+      <div class="dropdown-content">
+        <a href="#" onclick="showContent('12', 'As')">A</a>
+        <a href="#" onclick="showContent('12', 'Bs')">B</a>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-padding">
+        <i class="fa fa-envelope fa-fw w3-margin-right"></i> 13. évfolyam
+      </a>
+      <div class="dropdown-content">
+        <a href="#" onclick="showContent('13', 'Ad')">A</a>
+        <a href="#" onclick="showContent('13', 'Bd')">B</a>
+      </div>
+    </div>
+    
+    <div class="sidebar">
+      <h2>Rólam</h2>
+      <p>Jónás Ádámnak hívnak és 19 éves vagyok. Jelenleg a Dunaújvárisi Bánki Donát Technikum ipari informatika technikus szakán tanulok, ahol már mélyebb ismeretek szereztem az elektronikai rendszerek, a programozás, valamint az egyéb gépek és programok alkalmazásának területén. Azért jöttem ebbe az iskolába mert érdekelt a digitális világ és többet szeretttem volna megismerni belőle. Tanulmányaimat az egyetemen ugyan nem az ipari területen fogom folytatni de az itt tanultak közül sok mindent fogok tudni ott is hasznosítani, mint példál a Hálózat vagy az adatbáziskezelést. Ebben a portfólióban be fogom mutatni azokat a tantárgyakat és az azokhoz kapcsolódó projekteket, amelyekkel az elmúlt évek során foglalkoztunk.</p>
+  </div>
+</nav>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:0px">
+  <header id="portfolio">
+    <a href="#"><img src="elektro1.jpg" style="width:65px;" class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a>
+    <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i class="fa fa-bars"></i></span>
+    <div class="w3-container">
+      <h1><b>Portfólió</b></h1>
+    </div>
+  </header>
+  <!-- A B választási tartalom -->
+  <div class="right-content">
+    <!-- Évfolyam és tantárgy megjelenítése -->
+    <div id="selectedInfo" class="selected-info">
+      <h3>Válassz egy évfolyamot és félévet!</h3>
+    </div>
+
+    <!-- Alapértelmezett szöveg -->
+    <div id="defaultContent" class="default-content">
+      <h3>Válassz egy lehetőséget!</h3>
+      <p>Kattints az A vagy B választásra, hogy megjelenjen a tartalom.</p>
+    </div>
+
+    <!-- A választás -->
+    <div id="AContent" style="display:none;">
+    <h3>Elektrotechnika</h3>
+    <p>Az Elektrotechnika tantárgy projektfeladata során először kiszámoltuk az áramkör fontos értékeit (pl. feszültségek, áramok, ellenállások). Ezután egy szimulációt készítettünk a Falstad alkalmazásban, hogy ellenőrizzük, helyesen számoltunk-e. A szimuláció megmutatta az áramkör működését és az egyes pontokon mért feszültségeket, így össze tudtuk hasonlítani a számításainkkal. A képeken a egy NPN bipoláris tranzisztor alapú erősítő áramkör szimulációs és saját magunk által kiszámított eredményei láthatóak.</p>
+    <!-- Képek sorozata -->
+   
+<div class="image-row">
+        <img src="img/11/A/Elektrotechnika/elektro1.jpg" alt="Nagyítható kép" onclick="openLightbox(this.src)">
+        <img src="img/11/A/Elektrotechnika/elektro2.jpg" alt="Nagyítható kép" onclick="openLightbox(this.src)">
+        <img src="img/11/A/Elektrotechnika/elektro3.jpg" alt="Nagyítható kép" onclick="openLightbox(this.src)">
+</div>
+
+<!-- Nagyított kép rétege -->
+<div class="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img" src="" alt="Nagyított kép">
+</div>
+    <h4>Önreflexió:</h4>
+    <p>Tantárgy célja: Elektrotechnikai alapok megértése</p>
+    <p>Tantárgy fókusza: Elmélet + gyakorlat kombinációja</p>
+    <p>Fejlesztett készségek:
+      Problémamegoldás,
+      Műszaki gondolkodás,
+      Precíz munkavégzés,
+      Áramkörök és komponensek használata</p>
+      Eredmény: Elektronikai rendszerek jobb megértése, hasznos tapasztalatok a jövőre nézve</p>
+
+    <!-- Mikrovezérlő programozás aláhelyezés -->
+    <h3>Mikrovezérlő programozás</h3>
+    <p>A Mikrovezérlő programozáson egy hő- és páratartalom mérőt készítettem és programoztam be, ami egy DHT22 érzékelővel meg mérte a hőt és páratartalmat az adott helységben és a pillanatnyi adatokat ki mutatta egy KC-2004-BB digitális kijelzőn. Ezt az egészet egy mikrovezérlővel vezéreltem aminek a kódját az Arduino-ban írtam meg.</p>
+    <!-- Képek sorozata -->
+    <div class="image-row">
+      <img src="img\11\A\Mikrovezerlo\mikro1.jpg" alt="Mikro 1" onclick="openLightbox(this.src)">
+      <img src="img\11\A\Mikrovezerlo\mikro2.jpg" alt="Mikro 2" onclick="openLightbox(this.src)">
+      <img src="img\11\A\Mikrovezerlo\mikro3.jpg" alt="Mikro 3" onclick="openLightbox(this.src)">
+    </div>
+    <div class="image-row">
+      <img src="img\11\A\Mikrovezerlo\mikro4.jpg" alt="Mikro 4" onclick="openLightbox(this.src)">
+      <img src="img\11\A\Mikrovezerlo\mikro5.jpg" alt="Mikro 5" onclick="openLightbox(this.src)">
+      <img src="img\11\A\Mikrovezerlo\mikro6.jpg" alt="Mikro 6" onclick="openLightbox(this.src)">
+    </div>
+    
+  <div class="lightbox" onclick="closeLightbox()">
+      <img id="lightbox-img" src="" alt="Nagyított kép">
+  </div> 
+    <h4>Önreflexió:</h4>
+    <p>Tantárgy fókusza: Mikrovezérlők működése és programozása</p>
+    <p>Gyakorlati ismeretek:
+      Szenzorok és perifériák integrálása,
+      Mikrovezérlők hatékony programozása</p>
+    <p>Fejlesztett készségek:
+      Technikai tudás,
+      Logikus gondolkodás,
+      Programozási készségek</p>
+    </div>
+
+    <!-- B választás -->
+<div id="BContent" style="display:none;">
+  <h3>Digitális áramkörök</h3>
+  <p>A Digitális áramkörök tantárgy projektje egy mérési jegyzőkönyv elkészítése volt ahol a feladat a kombinációs hákózatok realizálása kapuáramkörök segítségével volt. A feladatban elkészítettük egy 4 fős szavazógépnek a NÉV, NAND és NOR kapukkal realizált kombinációs hálózatát, ahol a személyek szavazata eltérő súllyal számolandó. A szavazás akkor eredményes, ha az összes szavazatra kapott érték (a súlyozott összeg) a maximális érték felénél több. A négy személy és szavazatának súlya:
+    Elnök (E)4-szeres súlyú,
+    Titkár (T)3-szoros súlyú,
+    1. tag (A)2-szeres súlyú,
+    2. tag (B)2-szeres súlyú.</p>
+  <!-- Képek sorozata -->
+  <div class="image-row">
+   
+  
+      <img src="img/11/B/Digitalisa/diga1.jpg" alt="Diga 1" onclick="openLightbox1(this.src)">
+  
+      <img src="img/11/B/Digitalisa/diga2.jpg" alt="Diga2" onclick="openLightbox1(this.src)">
+      <img src="img/11/B/Digitalisa/diga3.jpg" alt="Diga3" onclick="openLightbox1(this.src)">
+  </div>
+
+  <div class="image-row">
+      <img src="img/11/B/Digitalisa/diga4.jpg" alt="Diga4" onclick="openLightbox1(this.src)">
+      <img src="img/11/B/Digitalisa/diga5.jpg" alt="Diga5" onclick="openLightbox1(this.src)">
+  </div>
+
+  <div class="lightbox1" onclick="closeLightbox1()">
+    <img id="lightbox1-img" src="" alt="Nagyított kép">
+  </div>
+    <h4>Önreflexió:</h4>  
+    <p>Tantárgy fókusza: Logikai rendszerek működése és tervezése</p>
+    Tanult ismeretek:
+    Alapvető logikai kapuk és szekvenciális áramkörök,
+    Gyakorlati alkalmazások és tervezési elvek</p>
+    <p>Gyakorlati tapasztalatok:
+    Saját kapcsolások építése és tesztelése,
+    Hibakeresési folyamatok elsajátítása</p>
+    <p>Kihívások és fejlődés: Kezdeti nehézségek leküzdése, magabiztosabb tervezés</p>
+    <p>Fejlesztett készségek:
+      Műszaki tudás,
+      Problémamegoldás,
+      Logikus gondolkodás</p>
+
+    <h3>Programozás alapjai</h3>
+    <p>A programozás alapjai tantárgy során a Python programozási nyelvet tanultuk meg, sokszor játékos formában. A képeken egy számkitaláló játék megoldása látható ahol a felhasználónak egy véletlenszerűen generált számot kell kitalálni, amelyet egy program választ ki az általunk megadott határértékeken belül.</p>
+    <!-- Képek sorozata -->
+    <div class="image-row">
+      <img src="img\11\B\Programozas\proga1.jpg" alt="Proga 1" onclick="openLightbox1(this.src)">
+      <img src="img\11\B\Programozas\proga2.jpg" alt="Proga 2" onclick="openLightbox1(this.src)">
+      <img src="img\11\B\Programozas\proga3.jpg" alt="Proga 3" onclick="openLightbox1(this.src)">
+    </div>
+	  <div class="lightbox1" onclick="closeLightbox1()">
+    <img id="lightbox1-img" src="" alt="Nagyított kép">
+  </div>
+    <h4>Önreflexió:</h4>
+    <p>Tantárgy fókusza: Python programozás alapjainak megtanulása</p>
+    <p>Tanult ismeretek:
+      Kódolási alapok és logikai gondolkodás fejlesztése,
+      Ciklusok, elágazások és változók működése</p>
+    <p>Gyakorlati tapasztalatok:
+      Hatékony problémamegoldás,
+      Könyvtárak használata a fejlesztés során</p>
+    <p>Fejlődés: Egyre összetettebb feladatok megoldásának elsajátítása</p>
+  </div>
+
+  <div id="12AContent" style="display:none;">
+    <h3>Adatbáziskezelés</h3>
+    <p>Az Adatbáziskezelés órán egy relációs adatbázist készítettem el ami ipari gyártáshoz szükséges alkatrészek beszerzését, tárolását és felhasználását követi nyomon. A fő szempont a lekérdezések megtanulása volt amiket ezen az adatbázison keresztül végeztünk el.</p>
+    <!-- Képek sorozata -->
+    <div class="image-row">
+      <img src="img\12\A\Adatbaziskezeles\adatb.jpg" alt="Adatb 1" onclick="openLightbox2(this.src)" >
+      <img src="img\12\A\Adatbaziskezeles\adatb2.jpg" alt="Adatb 2" onclick="openLightbox2(this.src)">
+      <img src="img\12\A\Adatbaziskezeles\adatb3.jpg" alt="Adatb 3" onclick="openLightbox2(this.src)">
+    </div>
+    <div class="image-row">
+      <img src="img\12\A\Adatbaziskezeles\adatb4.jpg" alt="Adatb 4" onclick="openLightbox2(this.src)">
+      <img src="img\12\A\Adatbaziskezeles\adatb5.jpg" alt="Adatb 5" onclick="openLightbox2(this.src)">
+      <img src="img\12\A\Adatbaziskezeles\adatb6.jpg" alt="Adatb 6" onclick="openLightbox2(this.src)">
+    </div>
+		  <div class="lightbox2" onclick="closeLightbox2()">
+    <img id="lightbox2-img" src="" alt="Nagyított kép">
+  </div>
+    <h4>Önreflexió:</h4>
+    <p>Tantárgy fókusza: Adatbázis-kezelés alapjainak elsajátítása</p>
+    <p>Tanult ismeretek:
+      Hatékony és pontos adatkezelés fontossága,
+      Adatbázisok tervezése és karbantartása</p>
+    <p>Gyakorlati tapasztalatok:
+      Rendszerek és adatfolyamok megértése,
+      Optimalizált lekérdezések jelentősége a teljesítményben</p>
+    <p>Legfontosabb tanulság: A jól megtervezett adatbázis alapvetően befolyásolja a rendszer működését</p>
+    
+    <h3>Hálózatkezelés</h3>
+    <p>A Hálózatkezelés projektmunkájaban egy több telephelyből álló vállalat létrehozása volt a cél, amik routerekkel vannak összekötve és a központi telephelyre egy szervert is telepítettem melynek weboldalára bármely készülékről be tudok lépni. A hálózat részét képezte szerverek beállítása, például DHCP, web, FTP és DNS funkciókkal, ahol a DNS név egyedi megadása is feladat volt. Az egész rendszert a 10.0.1.0 IP-tartományban valósítottam meg.</p>
+    <!-- Képek sorozata -->
+    <div class="image-row">
+      <img src="img\12\A\Halozatkezeles\halozat.jpg" alt="Halo 1" onclick="openLightbox2(this.src)">
+      <img src="img\12\A\Halozatkezeles\halozat1.jpg" alt="Halo 2" onclick="openLightbox2(this.src)">
+      <img src="img\12\A\Halozatkezeles\halozat2.jpg" alt="Halo 3" onclick="openLightbox2(this.src)">
+    </div>
+    <div class="image-row">
+      <img src="img\12\A\Halozatkezeles\halozat3.jpg" alt="Halo 4" onclick="openLightbox2(this.src)">
+      <img src="img\12\A\Halozatkezeles\halozat4.jpg" alt="Halo 5" onclick="openLightbox2(this.src)">
+    </div>
+    <div class="lightbox2" onclick="closeLightbox2()">
+      <img id="lightbox2-img" src="" alt="Nagyított kép">
+    </div>
+    <h4>Önreflexió:</h4>
+    <p>Tantárgy fókusza: Számítógépes hálózatok felépítése és működése</p>
+    <p>Tanult ismeretek:
+      IP, TCP, DNS protokollok szerepe,
+      Hálózatbiztonság és hatékonyság biztosítása</p>
+    <p>Gyakorlati tapasztalatok:
+      Hálózati eszközök konfigurálása,
+      Hibakeresési technikák elsajátítása</p>
+    <p>Legfontosabb tanulság: A hálózati rendszerek mélyebb megértése erős alapot ad a szakmai fejlődéshez</p>
+</div>
+<!-- B választás -->
+<div id="12BContent" style="display:none;">
+  <h3>PLC Programozás</h3>
+  <p>PLC Programozás során a projektmunkám célja egy olyan PLC-vezérelt kupakoló gép létrehozása volt, amely automatikusan kupakolja a gyártósoron érkező üvegeket, miután egy érzélekő érzékeli azokat. A rendszer irányítja a motor indítását és megállását, a töltőállomás működését és a kupakolási folyamatot. Az egyes lépések előre meghatározott sorrendben és időzítéssel zajlanak, biztosítva a folyamatos és hatékony működést.</p>
+  <!-- Képek sorozata -->
+  <div class="image-row">
+    <img src="img\12\B\PLC\plc.jpg" alt="plc 1" onclick="openLightbox3(this.src)">
+    <img src="img\12\B\PLC\plc1.jpg" alt="plc 2" onclick="openLightbox3(this.src)">
+    <img src="img\12\B\PLC\plc2.jpg" alt="plc 3" onclick="openLightbox3(this.src)">
+  </div>
+  <div class="lightbox3" onclick="closeLightbox3()">
+    <img id="lightbox3-img" src="" alt="Nagyított kép">
+  </div>
+  <h4>Önreflexió:</h4>
+  <p>Tantárgy fókusza: Ipari automatizálás és PLC-programozás</p>
+  <p>Tanult ismeretek:
+    Programozható logikai vezérlők működése,
+    Bonyolultabb programozási logikák és hibakeresés</p>
+  <p>Gyakorlati tapasztalatok:
+    Elméleti ismeretek alkalmazása valós feladatokban,
+    Magabiztosság növekedése a gyakorlati munkák során</p>
+  <p>Legfontosabb tanulság: A gyakorlati tapasztalatok segítettek a PLC-rendszerek hatékony programozásában</p>
+
+  <h3>Számítógépes szimuláció</h3>
+  <p>A Számítógépes szimuláció projektmunkája egy tapskapcsoló NYÁK (Nyomtatott áramkör) kapcsolási rajzának létrehozása volt, ezeket a Falstad és az EasyEda szimulációs környezetében csináltuk meg majd ezek alapján le is gyártattuk a NYÁK-ot.</p>
+  <!-- Képek sorozata -->
+  <div class="image-row">
+    <img src="img\12\B\Szimulacio\szimulacio.jpg" alt="Szimulacio 1" onclick="openLightbox3(this.src)">
+    <img src="img\12\B\Szimulacio\szimulacio1.jpg" alt="Szimulacio 2" onclick="openLightbox3(this.src)">
+    <img src="img\12\B\Szimulacio\szimulacio2.jpg" alt="Szimulacio 3" onclick="openLightbox3(this.src)">
+  </div>
+  <div class="lightbox3" onclick="closeLightbox3()">
+    <img id="lightbox3-img" src="" alt="Nagyított kép">
+  </div>
+  <h4>Önreflexió:</h4>
+  <p>Tantárgy fókusza: Számítógépes szimuláció és modellezés</p>
+  <p>Tanult ismeretek:
+    Folyamatok modellezése és vizsgálata,
+    Pontosabb elemzési módszerek elsajátítása</p>
+  <p>Gyakorlati tapasztalatok:
+    Problémamegoldó képesség fejlesztése,
+    Logikus gondolkodás erősítése</p>
+  <p>Legfontosabb tanulság: A szimulációk segítenek a rendszerek mélyebb megértésében és hatékony elemzésében.</p>
+</div>
+
+<div id="13AContent" style="display:none;">
+  <h3>IoT (Internet of Things)</h3>
+  <p>Az IoT tantárgy során szintén egy hő- és páratartalom mérő készüléket csináltam de viszont itt a telefonomat összekapcsoltam egy ESP8266 modullal, amely kábellel csatlakozik a számítógéphez. A számítógépen az Arduino IDE program fut, amelyben a megfelelő kód van betöltve az ESP8266 számára. Az ESP modul feladata, hogy webes szerverként működjön, és az érzékelők által gyűjtött adatokat, mint a hőmérsékletet és a páratartalmat egy weboldalon keresztül jelenítse meg. A telefon kijelzőjén egy ez az egyszerű weboldal látható, amely folyamatosan frissíti a szerverről érkező adatokat. Az ESP8266 modul, amely beépített Wi-Fi képességgel rendelkezik, folyamatosan kommunikál a weboldalt megjelenítő telefon és az érzékelő között.</p>
+  <!-- Képek sorozata -->
+  <div class="image-row">
+    <img src="img\13\A\IoT\iot.jpg" alt="Iot 1" onclick="openLightbox4(this.src)">
+    <img src="img\13\A\IoT\iot1.jpg" alt="Iot 2" onclick="openLightbox4(this.src)">
+    <img src="img\13\A\IoT\iot2.jpg" alt="Iot 3" onclick="openLightbox4(this.src)">
+  </div>
+  <div class="lightbox4" onclick="closeLightbox4()">
+    <img id="lightbox4-img" src="" alt="Nagyított kép">
+  </div>
+  <h4>Önreflexió:</h4>
+  <p>Tantárgy fókusza: IoT rendszerek és eszközök közötti kommunikáció</p>
+  <p>Tanult ismeretek:
+    Szenzorok és hálózati protokollok működése,
+    Adatgyűjtés szerepe a modern világban,
+    Adatbiztonság és magánélet védelme az IoT rendszerekben</p>
+  <p>Gyakorlati tapasztalatok:
+    IoT rendszerek tervezése és működtetése,
+    Gyakorlati projektek révén szerzett tapasztalatok</p>
+  <p>Legfontosabb tanulság: Az IoT technológiák megértése és biztonságos alkalmazása kulcsfontosságú a hatékony és megbízható rendszerek kialakításához.</p>
+  
+  <h3>Munkavállalói idegen nyelv</h3>
+  <p>A Munkavállalói idegen nyelv tantárgy keretében egy olyan projektet készítettünk, amelynek során két különböző nyelven kellett önéletrajzokat (CV-ket) készíteni: egy angolt és egy magyart. A projekt célja az volt, hogy fejlesszük a szakmai kommunikációs készségeinket, különös figyelmet fordítva az önéletrajzok megírásának szabályaira és formátumára mindkét nyelven. Illetve sokat tanultunk a mai munkaerőpiaci helyzetről a világban.</p>
+  <!-- Képek sorozata -->
+  <div class="image-row">
+    <img src="img\13\A\Munkavallaloi\kep1.jpg" alt="Angol 1" onclick="openLightbox4(this.src)">
+    <img src="img\13\A\Munkavallaloi\kep2.jpg" alt="Angol 2" onclick="openLightbox4(this.src)">
+  </div>
+  <div class="lightbox4" onclick="closeLightbox4()">
+    <img id="lightbox4-img" src="" alt="Nagyított kép">
+  </div>
+  <h4>Önreflexió:</h4>
+  <p>Tantárgy fókusza: Szakmai angol nyelv és munkaerőpiaci kommunikáció</p>
+  <p>Tanult ismeretek:
+    Önéletrajz írása magyar és angol nyelven,
+    Szakmai nyelvezet és kulturális különbségek megértése,
+    Hatékony önbemutatás a munkaerőpiacon</p>
+  <p>Gyakorlati tapasztalatok:
+    Magyar és angol önéletrajz összehasonlítása,
+    Szakmai szókincs fejlesztése</p>
+  <p>Legfontosabb tanulság: Az angol nyelvű szakmai kommunikáció elsajátítása elengedhetetlen a nemzetközi munkalehetőségek kihasználásához.</p>
+</div>
+<!-- B választás -->
+<div id="13BContent" style="display:none;">
+<h3>Programfejlesztés</h3>
+<p>A Programfejlesztés tantárgy során egy kódot írtam meg ami egy C# Windows Forms alkalmazást valósít meg, amely kapcsolatot létesít az adatbáziskezelés tantárgy során készített MySQL adatbázissal, majd onnan adatokat olvas ki, amelyeket különböző vezérlőelemekben jelenít meg. Az alkalmazás fő funkciói közé tartozik a gyártók szerinti alkatrész lekérdezés, valamint a 2000 Ft-nál drágább termékek listázása. </p>
+<!-- Képek sorozata -->
+<div class="image-row">
+  <img src="img\13\B\Progf\progf.jpg" alt="progf 1" onclick="openLightbox5(this.src)">
+  <img src="img\13\B\Progf\progf1.jpg" alt="progf 2" onclick="openLightbox5(this.src)">
+  <img src="img\13\B\Progf\progf2.jpg" alt="progf 3" onclick="openLightbox5(this.src)">
+</div>
+<div class="image-row">
+  <img src="img\13\B\Progf\progf3.jpg" alt="progf 4" onclick="openLightbox5(this.src)">
+  <img src="img\13\B\Progf\progf4.jpg" alt="progf 5" onclick="openLightbox5(this.src)">
+</div>
+<div class="lightbox5" onclick="closeLightbox5()">
+  <img id="lightbox5-img" src="" alt="Nagyított kép">
+</div>
+<h4>Önreflexió:</h4>
+<p>Tantárgy fókusza: Programozás alapjainak elsajátítása</p>
+<p>Tanult ismeretek:
+  Kódolás alapelvei és logikai gondolkodás fejlesztése,
+  Hibakeresés és problémamegoldás,
+  Programozási nyelvek és eszközök alkalmazása</p>
+<p>Gyakorlati tapasztalatok:
+  Csapatmunka és feladatmegosztás,
+  Önálló munkavégzés és időmenedzsment fejlesztése</p>
+<p>Legfontosabb tanulság: A programozás nemcsak technikai tudást, hanem kitartást és rendszerszemléletet is igényel.</p>
+
+<h3>Robottechnika</h3>
+<p>A Robottechnika tantárgy projektmunkája egy alapvető DC-DC konverter, pontosabban egy boost konverter kapcsolási rajzának elkészítése volt a Falstad szimulációban. Az ilyen áramkörök célja az, hogy az áramforrás bemeneti feszültségét növelje, így egy magasabb kimeneti feszültséget képes előállítani.</p>
+<!-- Képek sorozata -->
+<div class="image-row">
+  <img src="img\13\B\Robottechnika\robo1.jpg" alt="Robo 1" onclick="openLightbox5(this.src)">
+  <img src="img\13\B\Robottechnika\robo2.jpg" alt="Robo 2" onclick="openLightbox5(this.src)">
+  <img src="img\13\B\Robottechnika\robo3.jpg" alt="Robo 3" onclick="openLightbox5(this.src)">
+</div>
+<div class="image-row">
+  <img src="img\13\B\Robottechnika\robo4.jpg" alt="Robo 4" onclick="openLightbox5(this.src)">
+</div>
+<div class="lightbox5" onclick="closeLightbox5()">
+  <img id="lightbox5-img" src="" alt="Nagyított kép">
+</div>
+<h4>Önreflexió:</h4>
+<p>Tantárgy fókusza: Robotok tervezése és gyártása CAD/CAM rendszerekkel</p>
+<p>Tanult ismeretek:
+  CAD rendszerek használata robotmodellezéshez és szimulációhoz,
+  CAM rendszerek alkalmazása a gyártási folyamatok optimalizálására,
+  Robotprogramozás alapjai és kihívásai</p>
+<p>Gyakorlati tapasztalatok:
+  Modellezési és szimulációs technikák elsajátítása,
+  Gyártási folyamatok megértése és fejlesztése</p>
+<p>Legfontosabb tanulság: A robotikai rendszerek tervezése és programozása összetett feladat, amely logikus gondolkodást és precizitást igényel.</p>
+</div>
+<script>
+
+
+function showContent(year, option) {
+
+  let subjectLine1 = '';
+  let subjectLine2 = '';
+
+  if (year === '11') {
+    if (option === 'A') {
+      subjectLine1 = 'Első félév';
+      subjectLine2 = '';
+    } else if (option === 'B') {
+      subjectLine1 = 'Második félév';
+      subjectLine2 = '';
+    }
+  }
+  if (year === '12') {
+    if (option === 'As') {
+      subjectLine1 = 'Első félév';
+      subjectLine2 = '';
+    } else if (option === 'Bs') {
+      subjectLine1 = 'Második félév';
+      subjectLine2 = '';
+    }
+  }
+  if (year === '13') {
+    if (option === 'Ad') {
+      subjectLine1 = 'Első félév';
+      subjectLine2 = '';
+    } else if (option === 'Bd') {
+      subjectLine1 = 'Második félév';
+      subjectLine2 = '';
+    }
+  }
+  document.getElementById("selectedInfo").innerHTML = `<p>${year}. évfolyam - ${subjectLine1}</p><p>${subjectLine2}</p>`;
+
+  document.getElementById("defaultContent").style.display = "none";
+  document.getElementById("AContent").style.display = (option === 'A') ? "block" : "none";
+  document.getElementById("BContent").style.display = (option === 'B') ? "block" : "none";
+  document.getElementById("12AContent").style.display = (option === 'As') ? "block" : "none";
+  document.getElementById("12BContent").style.display = (option === 'Bs') ? "block" : "none";
+  document.getElementById("13AContent").style.display = (option === 'Ad') ? "block" : "none";
+  document.getElementById("13BContent").style.display = (option === 'Bd') ? "block" : "none";
+}
+
+
+ function openLightbox(imageSrc) {
+      document.getElementById("lightbox-img").src = imageSrc;
+      document.querySelector(".lightbox").style.display = "flex";
+  }
+
+  function closeLightbox() {
+      document.querySelector(".lightbox").style.display = "none";
+  }
+
+ function openLightbox1(imageSrc) {
+      document.getElementById("lightbox1-img").src = imageSrc;
+      document.querySelector(".lightbox1").style.display = "flex";
+  }
+
+  function closeLightbox1() {
+      document.querySelector(".lightbox1").style.display = "none";
+  }
+ function openLightbox2(imageSrc) {
+      document.getElementById("lightbox2-img").src = imageSrc;
+      document.querySelector(".lightbox2").style.display = "flex";
+  }
+
+  function closeLightbox2 () {
+      document.querySelector(".lightbox2").style.display = "none";
+  }
+
+  function openLightbox3(imageSrc) {
+      document.getElementById("lightbox3-img").src = imageSrc;
+      document.querySelector(".lightbox3").style.display = "flex";
+  }
+
+  function closeLightbox3 () {
+      document.querySelector(".lightbox3").style.display = "none";
+  }
+
+  function openLightbox4(imageSrc) {
+      document.getElementById("lightbox4-img").src = imageSrc;
+      document.querySelector(".lightbox4").style.display = "flex";
+  }
+
+  function closeLightbox4 () {
+      document.querySelector(".lightbox4").style.display = "none";
+  }
+
+  function openLightbox5(imageSrc) {
+      document.getElementById("lightbox5-img").src = imageSrc;
+      document.querySelector(".lightbox5").style.display = "flex";
+  }
+
+  function closeLightbox5 () {
+      document.querySelector(".lightbox5").style.display = "none";
+  }
+</script>
+
+</body>
+</html>
